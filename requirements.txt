@@ -5,5 +5,5 @@ numpy
 chromadb
 python-docx
 fastapi
-uivcorn
+uvicorn
 python-multipart
