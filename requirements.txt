@@ -4,3 +4,6 @@ pypdf
 numpy
 chromadb
 python-docx
+fastapi
+uivcorn
+python-multipart

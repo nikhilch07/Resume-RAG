@@ -14,6 +14,9 @@ def get_embedding(text: str) -> list[float]:
     response = client.embeddings.create(model="text-embedding-3-small", input=text)
     return response.data[0].embedding
 
+def clear_resume_chunks():
+    collection.delete(where={"source": "resume"})
+
 def add_chunks_to_db(chunks: list[str], source: str) -> None:
     for i, chunk in enumerate(chunks):
         embedding = get_embedding(chunk)
