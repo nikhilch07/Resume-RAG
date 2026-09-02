@@ -18,6 +18,9 @@ def cleanup_files(*paths: str) -> None:
         if os.path.exists(path):
             os.remove(path)
 
+@app.get("/")
+def read_root():
+    return {"message": "API is running"}
 
 @app.post("/tailor-resume")
 async def tailor_resume(
