@@ -1,5 +1,5 @@
-from client import client
-from schema import Resume
+from core.client import client
+from core.schema import Resume
 
 def rewrite_resume_structured(original_text: str, jd_text: str, gaps: list[dict]) -> Resume:
     gap_summary = "\n".join([f"- {g['jd_requirement'][:100]}" for g in gaps if g["status"] == "GAP"])

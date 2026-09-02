@@ -1,9 +1,9 @@
 # from client import client
-from documents import load_pdf_text, chunk_text
-from embeddings import add_chunks_to_db, search_similar
-from matcher import analyze_gaps
-from tailor import rewrite_resume_structured
-from formatter import create_resume_docx
+from core.documents import load_pdf_text, chunk_text
+from rag.embeddings import add_chunks_to_db, search_similar
+from rag.matcher import analyze_gaps
+from agents.tailor import rewrite_resume_structured
+from agents.formatter import create_resume_docx
 
 
 # response = client.chat.completions.create(

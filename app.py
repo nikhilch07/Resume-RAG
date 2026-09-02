@@ -4,11 +4,11 @@ import uuid
 from fastapi import FastAPI, UploadFile, Form, HTTPException, BackgroundTasks
 from fastapi.responses import FileResponse
 
-from documents import load_pdf_text, chunk_text
-from embeddings import add_chunks_to_db, search_similar, clear_resume_chunks
-from matcher import analyze_gaps
-from tailor import rewrite_resume_structured
-from formatter import create_resume_docx
+from core.documents import load_pdf_text, chunk_text
+from rag.embeddings import add_chunks_to_db, search_similar, clear_resume_chunks
+from rag.matcher import analyze_gaps
+from agents.tailor import rewrite_resume_structured
+from agents.formatter import create_resume_docx
 
 app = FastAPI()
 

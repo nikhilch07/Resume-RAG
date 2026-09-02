@@ -159,6 +159,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+ragEnv/ 
 
 # Spyder project settings
 .spyderproject
@@ -219,3 +220,5 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+tailored_resumes/

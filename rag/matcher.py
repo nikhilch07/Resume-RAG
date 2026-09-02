@@ -1,5 +1,5 @@
-from documents import chunk_text
-from embeddings import search_similar
+from core.documents import chunk_text
+from rag.embeddings import search_similar
 
 def analyze_gaps(jd_text: str, distance_threshold: float = 0.65) -> list[dict]:
     jd_chunks = chunk_text(jd_text, chunk_size=50)   # smaller chunks = more specific requirements per chunk
